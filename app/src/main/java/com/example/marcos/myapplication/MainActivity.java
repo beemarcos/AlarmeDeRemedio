@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //agenda pra daqui a X segundos
+    //agenda pra daqui a X segundos teste de commit hehe
     private void agendar(int segundos) {
         //Itent para disparar o Broadcast
         Intent  it= new Intent("EXECUTAR_ALARME");
