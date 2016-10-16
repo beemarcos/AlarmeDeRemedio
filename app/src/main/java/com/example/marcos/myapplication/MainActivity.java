@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Calendar;
@@ -22,16 +23,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TextView text = new TextView(this);
+        setContentView(R.layout.activity_main);
+
+        TextView text = (TextView)findViewById(R.id.texto_text_view);
         text.setText("Alarme agendado para daqui a "+segundos+" segundos.");
-        setContentView(text);
         //5 segundos
         agendar(5);
     }
 
-
-
-    //agenda pra daqui a X segundos teste de commit hehe
+    //agenda pra daqui a X segundos
     private void agendar(int segundos) {
         //Itent para disparar o Broadcast
         Intent  it= new Intent("EXECUTAR_ALARME");
@@ -55,5 +55,12 @@ public class MainActivity extends AppCompatActivity {
         //cancela o alarme
         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
         am.cancel(p);
+    }
+
+    public void clickButtonListar(View view) {
+        Intent getNameScreenIntent = new Intent(this,ListActivity.class);
+        final int result = 1;
+        getNameScreenIntent.putExtra("callingActivity","MainActivity");
+        startActivityForResult(getNameScreenIntent,result);
     }
 }
