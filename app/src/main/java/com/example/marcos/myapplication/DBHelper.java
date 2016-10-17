@@ -10,7 +10,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
     private static String DB_NAME = "BancoDeDroga";
     private static int DV_VERSION= 1;
-    private static String TABLE_ITENS = "CREATE TABLE droga("+
+    private static String TABLE_ITENS = "CREATE TABLE itens("+
             "id INTEGER PRIMARY KEY AUTOINCREMENT,"+
             "nome TEXT"+
             ");";

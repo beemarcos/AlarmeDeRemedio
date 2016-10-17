@@ -24,5 +24,17 @@
         android:id="@+id/text_view_quem_chamou"
         android:text="Activity que chamou"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listar_database_button"
+        android:onClick="listaBanco"
+        android:text="Listar do Banco"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_database"/>
+
 
 </LinearLayout>

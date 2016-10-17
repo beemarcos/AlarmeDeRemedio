@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Created by Marcos on 10/15/2016.
  */
@@ -49,5 +51,18 @@ public class ListActivity extends Activity{
         goingBack.putExtra("chaveDeNada",voltaqualqecoisa);
         setResult(RESULT_OK,goingBack);
         finish();
+    }
+
+    public void listaBanco(View view) {
+        ////////Banco de dados//////
+        ArrayList<String> itens = null;
+        DBManager dbManager = new DBManager(this);
+        for (int i=0;i<10;i++)
+            dbManager.addItem("Item numero "+i);//preenche a lista com os valores
+
+        itens = dbManager.getAllItens();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,itens);
+        ListView listView = (ListView)findViewById(R.id.list_database);
+        listView.setAdapter(adapter);
     }
 }
