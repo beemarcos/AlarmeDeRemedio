@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/list_drogas"/>
 
+    <!--Remover depois tudo o que ta pra baixo-->
 
     <Button
         android:layout_width="match_parent"

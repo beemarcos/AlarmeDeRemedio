@@ -24,6 +24,13 @@
         android:text="@string/listar_remedios"
         android:onClick="clickButtonListar"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cadastrar_button"
+        android:text="@string/cadastrar_remedios"
+        android:onClick="clickButtonCadastrar"/>
+
 
 
 

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="listar_remedios">Listar Remedios</string>
+    <string name="cadastrar_remedios">Cadastrar Remedios</string>
 </resources>
