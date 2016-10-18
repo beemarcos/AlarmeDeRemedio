@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
         agendar(5);
 
 
-
-
-
     }
 
     //agenda pra daqui a X segundos
