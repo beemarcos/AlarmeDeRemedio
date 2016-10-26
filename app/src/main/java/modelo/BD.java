@@ -15,7 +15,7 @@ import controlador.Medicamento;
  */
 public class BD  {
     private SQLiteDatabase db;
-    /* Classe de Banco de dados*/
+    /* Classe de Banco de dadosh hh*/
 
     public BD(Context context){
         BDCore auxBd = new BDCore(context);
