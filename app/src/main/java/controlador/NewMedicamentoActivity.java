@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.marcos.myapplication.R;
+
 
 /**
  * Created by Pantufa on 22/10/2016.

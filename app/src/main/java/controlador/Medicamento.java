@@ -7,7 +7,7 @@ public class Medicamento {
     private long id;
     private String nome;
     private String tipo_dosagem; // comprimido ou líquido
-    private String tempo_tratamento;
+    private String tempo_tratamento; // dias ou indefinido(contínuo)
     private int dose;
     private int intervalo;
     private int quantidade;

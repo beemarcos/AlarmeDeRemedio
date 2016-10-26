@@ -11,6 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import modelo.BD;
+
 /**
  * Created by Pantufa on 22/10/2016.
  */
@@ -56,7 +59,7 @@ public class MedicamentoAdapter extends BaseAdapter {
         editarBt.setOnClickListener(new Button.OnClickListener(){
 
             public void onClick(View arg0) {
-                Intent intent = new Intent(context, NewUserActivity.class);
+                Intent intent = new Intent(context, NewMedicamentoActivity.class);
                 intent.putExtra("nome", list.get(auxPosition).getNome());
                 intent.putExtra("Tipo Dosagem", list.get(auxPosition).getTipo_dosagem());
                 intent.putExtra("Tempo Tratamento", list.get(auxPosition).getTempo_tratamento());
@@ -73,7 +76,7 @@ public class MedicamentoAdapter extends BaseAdapter {
 
             public void onClick(View arg0) {
                 BD bd = new BD(context);
-                bd.deletar(list.get(auxPosition));
+                bd.deletarMedicamento(list.get(auxPosition));
 
                 layout.setVisibility(View.GONE);
             }
