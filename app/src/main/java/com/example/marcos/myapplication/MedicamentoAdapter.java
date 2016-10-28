@@ -1,4 +1,4 @@
-package controlador;
+package com.example.marcos.myapplication;
 
 import java.util.List;
 
@@ -11,8 +11,6 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import modelo.BD;
 
 /**
  * Created by Pantufa on 22/10/2016.
@@ -49,7 +47,7 @@ public class MedicamentoAdapter extends BaseAdapter {
         final int auxPosition = position;
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.usuario, null);
+        final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.medicamento, null);
 
         TextView tv = (TextView) layout.findViewById(R.id.nome);
         tv.setText(list.get(position).getNome());

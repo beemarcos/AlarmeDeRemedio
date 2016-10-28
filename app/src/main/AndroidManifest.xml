@@ -20,8 +20,17 @@
             android:label="Get Name"
             android:theme="@style/AppTheme" />
         <activity android:name=".DescriActivity" />
-        <activity android:name=".LembActivity" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".LembActivity" />
+
+        <activity
+            android:name="com.example.marcos.myapplication.NewMedicamentoActivity"
+            android:label="@string/title_activity_new_medicamento" >
+        </activity>
+        <activity
+            android:name="com.example.marcos.myapplication.ListMedicamentosActivity"
+            android:label="@string/title_activity_list_medicamentos" >
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

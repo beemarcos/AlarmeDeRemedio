@@ -1,4 +1,4 @@
-package modelo;
+package com.example.marcos.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import controlador.Medicamento;
 
 /**
  * Created by Pantufa on 18/10/2016.

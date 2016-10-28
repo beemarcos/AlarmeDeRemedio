@@ -1,4 +1,4 @@
-package modelo;
+package com.example.marcos.myapplication;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
