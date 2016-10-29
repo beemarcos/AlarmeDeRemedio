@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
+   /* @Override
     public void onStart() {
         super.onStart();
         client.connect();
@@ -109,6 +109,6 @@ public class MainActivity extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
-    }
+    }*/
 
 }
