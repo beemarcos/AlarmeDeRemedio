@@ -26,7 +26,7 @@ public class NewMedicamentoActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_new_medicamento);
+        setContentView(R.layout.activity_new_medicamento);
 
         nomeEt = (EditText) findViewById(R.id.nome);
         tipo_dosagemEt = (EditText) findViewById(R.id.tipo_dosagem);
@@ -51,12 +51,12 @@ public class NewMedicamentoActivity extends Activity {
                 nomeEt.setText(medicamento.getNome());
                 tipo_dosagemEt.setText(medicamento.getTipo_dosagem());
                 tempo_tratamentoEt.setText(medicamento.getTempo_tratamento());
-                doseEt.setText(medicamento.getDose());
-                intervaloEt.setText(medicamento.getIntervalo());
-                quantidadeEt.setText(medicamento.getQuantidade());
+                //doseEt.setText(Integer.parseInt(String.valueOf(medicamento.getDose())));
+                //intervaloEt.setText(Integer.parseInt(String.valueOf(medicamento.getIntervalo())));
+                //quantidadeEt.setText(Integer.parseInt(String.valueOf(medicamento.getQuantidade())));
 
                 //senhaEt.setVisibility(View.GONE);
-                salvarBt.setVisibility(View.GONE);
+                //salvarBt.setVisibility(View.GONE);
                 editarBt.setVisibility(View.VISIBLE);
             }
         }
@@ -81,9 +81,9 @@ public class NewMedicamentoActivity extends Activity {
         medicamento.setNome(nomeEt.getText().toString());
         medicamento.setTipo_dosagem(tipo_dosagemEt.getText().toString());
         medicamento.setTempo_tratamento(tempo_tratamentoEt.getText().toString());
-        medicamento.setDose(Integer.parseInt(doseEt.getText().toString()));
-        medicamento.setIntervalo(Integer.parseInt(intervaloEt.getText().toString()));
-        medicamento.setQuantidade(Integer.parseInt(quantidadeEt.getText().toString()));
+       // medicamento.setDose(Integer.parseInt(doseEt.getText().toString()));
+        //medicamento.setIntervalo(Integer.parseInt(intervaloEt.getText().toString()));
+        //medicamento.setQuantidade(Integer.parseInt(quantidadeEt.getText().toString()));
 
         BD bd = new BD(this);
         bd.atualizarMedicamento(medicamento);

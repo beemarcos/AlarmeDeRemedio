@@ -10,12 +10,42 @@
         android:layout_height="wrap_content"
         android:text="Large Text" />
 
+    <TextView
+        android:id="@+id/tipo_dosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text" />
+
+    <TextView
+        android:id="@+id/tempo_tratamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text" />
+
+    <TextView
+        android:id="@+id/dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text" />
+
+    <TextView
+        android:id="@+id/intervalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text" />
+
+    <TextView
+        android:id="@+id/quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text" />
+
     <Button
         android:id="@+id/editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Editar"
-        android:onClick="editar" />
+        android:onClick="editarMedicamento" />
 
     <Button
         android:id="@+id/deletar"
