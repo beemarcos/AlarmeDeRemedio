@@ -13,7 +13,7 @@ public class ListMedicamentosActivity extends ListActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_list_medicamento); // Qualquer coisa remover
+        setContentView(R.layout.activity_list_medicamento); // Qualquer coisa remover
 
         BD db = new BD(this);
 

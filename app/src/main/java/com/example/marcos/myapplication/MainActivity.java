@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView text = (TextView)findViewById(R.id.texto_text_view);
         text.setText("Alarme agendado para daqui a "+segundos+" segundos.");
+
         //5 segundos
         agendar(5);
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         alarme.set(AlarmManager.RTC_WAKEUP,time,p);
         Log.i(CATEGORIA,"Alarme agendado para daqui "+segundos+" segundos.");
     }
+
     @Override
     protected void onDestroy(){
         super.onDestroy();
@@ -63,12 +65,7 @@ public class MainActivity extends AppCompatActivity {
         am.cancel(p);
     }
 
-    public void clickButtonListar(View view) {
-        Intent getNameScreenIntent = new Intent(this,ListActivity.class);
-        final int result = 1;
-        getNameScreenIntent.putExtra("callingActivity","MainActivity");
-        startActivityForResult(getNameScreenIntent,result);
-    }
+
 
 
    /* Minhas alterações apartir deste ponto*/
@@ -85,30 +82,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   /* @Override
-    public void onStart() {
-        super.onStart();
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW,
-                "Main Page",
-                Uri.parse("http://host/path"),
-                Uri.parse("android-app://controlador/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW,
-                "Main Page",
-                Uri.parse("http://host/path"),
-                Uri.parse("android-app://controlador/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }*/
 
 }
