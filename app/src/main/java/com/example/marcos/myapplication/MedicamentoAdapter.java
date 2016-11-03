@@ -51,7 +51,11 @@ public class MedicamentoAdapter extends BaseAdapter {
 
         TextView tv = (TextView) layout.findViewById(R.id.nome);
         tv.setText(list.get(position).getNome());
-
+        tv.setText(list.get(position).getTipo_dosagem());
+        tv.setText(list.get(position).getTempo_tratamento());
+        //tv.setText(list.get(position).getDose());
+        //tv.setText(list.get(position).getIntervalo());
+        //tv.setText(list.get(position).getQuantidade());
 
         Button editarBt = (Button) layout.findViewById(R.id.editar);
         editarBt.setOnClickListener(new Button.OnClickListener(){
@@ -59,11 +63,11 @@ public class MedicamentoAdapter extends BaseAdapter {
             public void onClick(View arg0) {
                 Intent intent = new Intent(context, NewMedicamentoActivity.class);
                 intent.putExtra("nome", list.get(auxPosition).getNome());
-                intent.putExtra("Tipo Dosagem", list.get(auxPosition).getTipo_dosagem());
-                intent.putExtra("Tempo Tratamento", list.get(auxPosition).getTempo_tratamento());
-                intent.putExtra("Dose", list.get(auxPosition).getDose());
-                intent.putExtra("Intervalo", list.get(auxPosition).getIntervalo());
-                intent.putExtra("Quantidade", list.get(auxPosition).getQuantidade());
+                intent.putExtra("tipo_dosagem", list.get(auxPosition).getTipo_dosagem());
+                intent.putExtra("tempo_tratamento", list.get(auxPosition).getTempo_tratamento());
+                intent.putExtra("dose", list.get(auxPosition).getDose());
+                intent.putExtra("intervalo", list.get(auxPosition).getIntervalo());
+                intent.putExtra("quantidade", list.get(auxPosition).getQuantidade());
                 intent.putExtra("id", list.get(auxPosition).getId());
                 context.startActivity(intent);
             }

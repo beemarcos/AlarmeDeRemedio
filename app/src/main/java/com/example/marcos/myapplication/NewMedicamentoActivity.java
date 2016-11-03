@@ -51,13 +51,13 @@ public class NewMedicamentoActivity extends Activity {
                 nomeEt.setText(medicamento.getNome());
                 tipo_dosagemEt.setText(medicamento.getTipo_dosagem());
                 tempo_tratamentoEt.setText(medicamento.getTempo_tratamento());
-                //doseEt.setText(Integer.parseInt(String.valueOf(medicamento.getDose())));
-                //intervaloEt.setText(Integer.parseInt(String.valueOf(medicamento.getIntervalo())));
-                //quantidadeEt.setText(Integer.parseInt(String.valueOf(medicamento.getQuantidade())));
+                //doseEt.setText(medicamento.getDose());
+                //intervaloEt.setText(medicamento.getIntervalo());
+                //quantidadeEt.setText(medicamento.getQuantidade()); // verificar como exibir tipo de dados integer na tela depois de pegar no banco
 
                 //senhaEt.setVisibility(View.GONE);
                 //salvarBt.setVisibility(View.GONE);
-                editarBt.setVisibility(View.VISIBLE);
+               /// editarBt.setVisibility(View.VISIBLE);
             }
         }
 
@@ -81,9 +81,9 @@ public class NewMedicamentoActivity extends Activity {
         medicamento.setNome(nomeEt.getText().toString());
         medicamento.setTipo_dosagem(tipo_dosagemEt.getText().toString());
         medicamento.setTempo_tratamento(tempo_tratamentoEt.getText().toString());
-       // medicamento.setDose(Integer.parseInt(doseEt.getText().toString()));
-        //medicamento.setIntervalo(Integer.parseInt(intervaloEt.getText().toString()));
-        //medicamento.setQuantidade(Integer.parseInt(quantidadeEt.getText().toString()));
+        medicamento.setDose(Integer.parseInt(doseEt.getText().toString()));
+        medicamento.setIntervalo(Integer.parseInt(intervaloEt.getText().toString()));
+        medicamento.setQuantidade(Integer.parseInt(quantidadeEt.getText().toString()));
 
         BD bd = new BD(this);
         bd.atualizarMedicamento(medicamento);
