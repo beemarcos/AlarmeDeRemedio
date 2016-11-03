@@ -78,6 +78,9 @@ public class NewMedicamentoActivity extends Activity {
         bd.inserirMedicamento(medicamento);
 
         Toast.makeText(this, "Medicamento inserido com sucesso!", Toast.LENGTH_SHORT).show();
+
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
 
@@ -93,6 +96,9 @@ public class NewMedicamentoActivity extends Activity {
         bd.atualizarMedicamento(medicamento);
 
         Toast.makeText(this, "Medicamento \""+medicamento.getNome()+"\" atuailizado com sucesso.", Toast.LENGTH_SHORT).show();
+
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
     }
 
