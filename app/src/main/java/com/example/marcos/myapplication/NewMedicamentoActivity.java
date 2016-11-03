@@ -35,6 +35,10 @@ public class NewMedicamentoActivity extends Activity {
         intervaloEt = (EditText) findViewById(R.id.intervalo);
         quantidadeEt = (EditText) findViewById(R.id.quantidade);
 
+        salvarBt = (Button) findViewById(R.id.button1);
+        editarBt = (Button) findViewById(R.id.button2);
+
+
         Intent intent = getIntent();
         if(intent != null){
             Bundle bundle = intent.getExtras();
@@ -51,13 +55,13 @@ public class NewMedicamentoActivity extends Activity {
                 nomeEt.setText(medicamento.getNome());
                 tipo_dosagemEt.setText(medicamento.getTipo_dosagem());
                 tempo_tratamentoEt.setText(medicamento.getTempo_tratamento());
-                //doseEt.setText(medicamento.getDose());
-                //intervaloEt.setText(medicamento.getIntervalo());
-                //quantidadeEt.setText(medicamento.getQuantidade()); // verificar como exibir tipo de dados integer na tela depois de pegar no banco
+                doseEt.setText(Integer.toString(medicamento.getDose()));
+                intervaloEt.setText(Integer.toString(medicamento.getIntervalo()));
+                quantidadeEt.setText(Integer.toString(medicamento.getQuantidade())); // verificar como exibir tipo de dados integer na tela depois de pegar no banco
 
-                //senhaEt.setVisibility(View.GONE);
-                //salvarBt.setVisibility(View.GONE);
-               /// editarBt.setVisibility(View.VISIBLE);
+
+                salvarBt.setVisibility(View.GONE);
+                editarBt.setVisibility(View.VISIBLE);
             }
         }
 

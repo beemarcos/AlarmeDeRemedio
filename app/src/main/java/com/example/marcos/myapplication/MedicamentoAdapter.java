@@ -51,11 +51,6 @@ public class MedicamentoAdapter extends BaseAdapter {
 
         TextView tv = (TextView) layout.findViewById(R.id.nome);
         tv.setText(list.get(position).getNome());
-        tv.setText(list.get(position).getTipo_dosagem());
-        tv.setText(list.get(position).getTempo_tratamento());
-        //tv.setText(list.get(position).getDose());
-        //tv.setText(list.get(position).getIntervalo());
-        //tv.setText(list.get(position).getQuantidade());
 
         Button editarBt = (Button) layout.findViewById(R.id.editar);
         editarBt.setOnClickListener(new Button.OnClickListener(){
