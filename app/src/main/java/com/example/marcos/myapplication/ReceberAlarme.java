@@ -14,5 +14,8 @@ public class ReceberAlarme extends BroadcastReceiver{
         Log.i(CATEGORIA,"Alarme Disparado!");
         //podemos iniciar uma activity, servico ou exibir uma notificacao ao usuario aqui
         Toast.makeText(context,"Alarme Disparado!",Toast.LENGTH_SHORT).show();
+
+        context.sendBroadcast(new Intent("INTERNET_LOST"));//chama activity
+
     }
 }

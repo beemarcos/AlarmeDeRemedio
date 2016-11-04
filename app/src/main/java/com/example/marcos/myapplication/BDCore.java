@@ -12,6 +12,7 @@ public class BDCore extends SQLiteOpenHelper{
     private static final int VERSAO_DB = 1;
 
     public BDCore(Context ctx){
+
         super(ctx, NOME_DB, null, VERSAO_DB);
     }
 
