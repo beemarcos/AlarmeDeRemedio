@@ -23,6 +23,8 @@ public class NewMedicamentoActivity extends Activity {
     private EditText quantidadeEt;
     private Button salvarBt;
     private Button editarBt;
+    private Button voltarMainBt;
+    private Button voltarListBt;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,8 @@ public class NewMedicamentoActivity extends Activity {
 
         salvarBt = (Button) findViewById(R.id.button1);
         editarBt = (Button) findViewById(R.id.button2);
-
+        voltarListBt = (Button) findViewById(R.id.button4);
+        voltarMainBt = (Button) findViewById(R.id.button3);
 
         Intent intent = getIntent();
         if(intent != null){
@@ -66,6 +69,17 @@ public class NewMedicamentoActivity extends Activity {
         }
 
         }
+
+    public void voltarMain(View view){
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void voltarLista(View view){
+        Intent intent=new Intent(this,ListMedicamentosActivity.class);
+        startActivity(intent);
+    }
+
     public void salvarMedicamento(View view){
         medicamento.setNome(nomeEt.getText().toString());
         medicamento.setTipo_dosagem(tipo_dosagemEt.getText().toString());
@@ -97,7 +111,7 @@ public class NewMedicamentoActivity extends Activity {
 
         Toast.makeText(this, "Medicamento \""+medicamento.getNome()+"\" atuailizado com sucesso.", Toast.LENGTH_SHORT).show();
 
-        Intent intent=new Intent(this,MainActivity.class);
+        Intent intent=new Intent(this,ListMedicamentosActivity.class);
         startActivity(intent);
     }
     }

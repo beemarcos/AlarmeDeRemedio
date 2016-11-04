@@ -72,10 +72,11 @@ public class MedicamentoAdapter extends BaseAdapter {
         deletarBt.setOnClickListener(new Button.OnClickListener(){
 
             public void onClick(View arg0) {
+                Intent intent = new Intent(context, ListMedicamentosActivity.class);
                 BD bd = new BD(context);
                 bd.deletarMedicamento(list.get(auxPosition));
-
                 layout.setVisibility(View.GONE);
+                context.startActivity(intent);
             }
         });
 
