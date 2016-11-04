@@ -65,6 +65,7 @@ public class NewMedicamentoActivity extends Activity {
 
                 salvarBt.setVisibility(View.GONE);
                 editarBt.setVisibility(View.VISIBLE);
+                voltarListBt.setVisibility(View.VISIBLE);
             }
         }
 
