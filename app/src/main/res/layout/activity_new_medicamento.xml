@@ -82,4 +82,24 @@
         android:onClick="editarMedicamento"
         android:visibility="gone" />
 
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar ao início"
+        android:layout_gravity="right"
+        android:onClick="voltarMain" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar a Lista"
+        android:layout_gravity="right"
+        android:onClick="voltarLista"
+        android:visibility="gone"/>
+
+
+
 </LinearLayout>
