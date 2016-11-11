@@ -1,5 +1,7 @@
 package com.example.marcos.myapplication;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 
 /**
@@ -94,8 +98,24 @@ public class NewMedicamentoActivity extends Activity {
 
         Toast.makeText(this, "Medicamento inserido com sucesso!", Toast.LENGTH_SHORT).show();
 
-        Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
+        //
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.set(Calendar.HOUR_OF_DAY,11);
+        calendar.set(Calendar.MINUTE,28);
+        //calendar.set(Calendar.SECOND,15);
+
+        Intent intent = new Intent(getApplicationContext(),ReceberAlarme.class);
+        intent.putExtra(medicamento.getNome(),"nomemedicamento");
+
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),1000*60*60*medicamento.getIntervalo(),pendingIntent);
+
+        //
+        Intent intent2=new Intent(this,MainActivity.class);
+        startActivity(intent2);
     }
 
 

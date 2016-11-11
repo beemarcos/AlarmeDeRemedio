@@ -21,8 +21,8 @@ public class ReceberAlarme extends BroadcastReceiver{
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setContentIntent(pendingIntent)
                 .setSmallIcon(android.R.drawable.arrow_up_float)
-                .setContentTitle("Notification Title")
-                .setContentText("Notification Text")
+                .setContentTitle("Hora Do Remedio.")
+                .setContentText("Medicamento "+intent.getExtras().getString("nomemedicamento")+" !")
                 .setAutoCancel(true);
         notificationManager.notify(100,builder.build());
 
