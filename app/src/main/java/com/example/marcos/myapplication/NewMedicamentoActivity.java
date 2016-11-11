@@ -60,7 +60,7 @@ public class NewMedicamentoActivity extends Activity {
                 tempo_tratamentoEt.setText(medicamento.getTempo_tratamento());
                 doseEt.setText(Integer.toString(medicamento.getDose()));
                 intervaloEt.setText(Integer.toString(medicamento.getIntervalo()));
-                quantidadeEt.setText(Integer.toString(medicamento.getQuantidade())); // verificar como exibir tipo de dados integer na tela depois de pegar no banco
+                quantidadeEt.setText(Integer.toString(medicamento.getQuantidade()));
 
 
                 salvarBt.setVisibility(View.GONE);

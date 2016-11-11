@@ -54,6 +54,4 @@
         android:text="Deletar"
         android:onClick="deletar" />
 
-
-
 </LinearLayout>
