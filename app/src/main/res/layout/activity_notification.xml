@@ -23,6 +23,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Hora do Remedio"
-        android:id="@+id/textView"
+        android:id="@+id/textViewNome"
         android:gravity="center" />
 </LinearLayout>

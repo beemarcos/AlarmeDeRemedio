@@ -17,12 +17,15 @@ public class ReceberAlarme extends BroadcastReceiver{
         NotificationManager notificationManager=(NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent repeating_intent = new Intent(context,Repeating_activity.class);
         repeating_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        //pegando de uma intent e colocando em outra, com a mesma chave
+        repeating_intent.putExtra("nomemedicamento",intent.getExtras().getString("nomemedicamento"));
+
         PendingIntent pendingIntent = PendingIntent.getActivity(context,100,repeating_intent,PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setContentIntent(pendingIntent)
                 .setSmallIcon(android.R.drawable.arrow_up_float)
-                .setContentTitle("Notification Title")
-                .setContentText("Notification Text")
+                .setContentTitle("Hora Do Remedio.")
+                .setContentText("Medicamento "+intent.getExtras().getString("nomemedicamento")+" !")
                 .setAutoCancel(true);
         notificationManager.notify(100,builder.build());
 
