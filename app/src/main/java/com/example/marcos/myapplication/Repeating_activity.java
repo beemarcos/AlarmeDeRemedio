@@ -19,8 +19,6 @@ public class Repeating_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
 
-        Bundle extras = getIntent().getExtras();
-
         Intent intent = getIntent();
 
         TextView text = (TextView)findViewById(R.id.textViewNome);
