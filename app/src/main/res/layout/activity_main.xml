@@ -11,7 +11,7 @@
     tools:context="com.example.marcos.myapplication.MainActivity">
 
 
-    <!-- Meu teste para cadastro de medicamentos -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,5 +37,14 @@
             android:layout_height="wrap_content"
             android:text="Lista de Medicamentos"
             android:onClick="getActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Localizar"
+        android:id="@+id/localizar"
+        android:layout_gravity="center_horizontal"
+        android:onClick="getActivity"/>
+
 
 </LinearLayout>

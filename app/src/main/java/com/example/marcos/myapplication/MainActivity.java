@@ -62,12 +62,14 @@ public class MainActivity extends AppCompatActivity {
    /* Minhas alterações apartir deste ponto*/
     public void getActivity(View view) {
         Button bt = (Button) view;
-        Intent intent;
+        Intent intent = null;
 
         if (bt.getText().toString().equalsIgnoreCase("Novo Medicamento")) {
             intent = new Intent(this, NewMedicamentoActivity.class);
-        } else {
+        } else if(bt.getText().toString().equalsIgnoreCase("Lista de Medicamentos")){
             intent = new Intent(this, ListMedicamentosActivity.class);
+        } else if(bt.getText().toString().equalsIgnoreCase("Localizar")){
+            intent = new Intent(this, PlacePickerActivity.class);
         }
 
         startActivity(intent);

@@ -25,4 +25,11 @@
         android:text="Hora do Remedio"
         android:id="@+id/textViewNome"
         android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textViewDose"
+        android:gravity="center_horizontal" />
 </LinearLayout>

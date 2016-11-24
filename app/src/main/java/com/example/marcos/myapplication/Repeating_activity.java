@@ -21,8 +21,10 @@ public class Repeating_activity extends Activity {
 
         Intent intent = getIntent();
 
-        TextView text = (TextView)findViewById(R.id.textViewNome);
-        text.setText("Medicamento: "+intent.getExtras().getString("nomemedicamento")+" !");
+        TextView textNome = (TextView)findViewById(R.id.textViewNome);
+        TextView textDose = (TextView)findViewById(R.id.textViewDose);
+        textNome.setText("Medicamento: "+intent.getExtras().getString("nomemedicamento")+" !");
+        //textNome.setText("Dose: "+intent.getExtras().getString("dosemedicamento")+" !");
 
     }
 

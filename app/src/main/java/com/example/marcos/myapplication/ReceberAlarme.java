@@ -19,6 +19,8 @@ public class ReceberAlarme extends BroadcastReceiver{
         repeating_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         //pegando de uma intent e colocando em outra, com a mesma chave
         repeating_intent.putExtra("nomemedicamento",intent.getExtras().getString("nomemedicamento"));
+        //repeating_intent.putExtra("dosemedicamento",intent.getExtras().getString("dosemedicamento"));
+
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context,100,repeating_intent,PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
