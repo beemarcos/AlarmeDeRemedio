@@ -98,12 +98,12 @@ public class NewMedicamentoActivity extends Activity {
 
         Toast.makeText(this, "Medicamento inserido com sucesso!", Toast.LENGTH_SHORT).show();
 
-        //
+        // alteracoes do marcos
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY,12);
-        calendar.set(Calendar.MINUTE,50);
-        //calendar.set(Calendar.SECOND,15);
+        calendar.set(Calendar.HOUR_OF_DAY,11);
+        calendar.set(Calendar.MINUTE,36);
+        calendar.set(Calendar.SECOND,15);
 
         Intent intent = new Intent(getApplicationContext(),ReceberAlarme.class);
         intent.putExtra("nomemedicamento",medicamento.getNome());
@@ -113,7 +113,9 @@ public class NewMedicamentoActivity extends Activity {
         AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),1000*60*60*medicamento.getIntervalo(),pendingIntent);
 
-        //
+
+
+        //voltando a main
         Intent intent2=new Intent(this,MainActivity.class);
         startActivity(intent2);
     }
