@@ -11,25 +11,63 @@
     tools:context=".Repeating_activity">
 
 
-    <ImageView
-        android:layout_width="265dp"
-        android:layout_height="361dp"
-        android:id="@+id/imageView"
-        android:src="@mipmap/remedio"
-        android:layout_gravity="center_horizontal" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Hora do Remedio"
         android:id="@+id/textViewNome"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/remedio"
+        android:layout_gravity="top|center_horizontal" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textViewDose"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:text="Tipo Da Dose" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dose"
+        android:id="@+id/textViewDosagem"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomei"
+            android:id="@+id/buttonTomei"
+            android:layout_weight="0.42"
+            android:onClick="onClickTomei"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depois"
+            android:id="@+id/buttonDepois"
+            android:layout_weight="0.42"
+            android:onClick="onClickDepois"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
 </LinearLayout>

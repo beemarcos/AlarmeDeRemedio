@@ -101,13 +101,16 @@ public class NewMedicamentoActivity extends Activity {
         // alteracoes do marcos
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY,11);
-        calendar.set(Calendar.MINUTE,36);
-        calendar.set(Calendar.SECOND,15);
+        calendar.set(Calendar.HOUR_OF_DAY,14);
+        calendar.set(Calendar.MINUTE,27);
+        //calendar.set(Calendar.SECOND,00);
 
         Intent intent = new Intent(getApplicationContext(),ReceberAlarme.class);
         intent.putExtra("nomemedicamento",medicamento.getNome());
-        //intent.putExtra("dosemedicamento",medicamento.getDose());
+        intent.putExtra("tipodosemedicamento",medicamento.getTipo_dosagem());
+        intent.putExtra("tempomedicamento",medicamento.getTempo_tratamento());
+        intent.putExtra("dosemedicamento",String.valueOf(medicamento.getDose()));
+        intent.putExtra("quantidademedicamento",String.valueOf(medicamento.getQuantidade()));
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);

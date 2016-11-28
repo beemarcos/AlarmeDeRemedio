@@ -18,8 +18,14 @@ public class BDCore extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table medicamento(_id integer primary key autoincrement, nome text not null, tipo_dosagem text not null, tempo_tratamento text not null, " +
-                "dose integer not null, intervalo integer not null, quantidade integer not null);");
+        db.execSQL("create table medicamento(" +
+                "_id integer primary key autoincrement, " +
+                "nome text not null, " +
+                "tipo_dosagem text not null, " +
+                "tempo_tratamento text not null, " +
+                "dose integer not null, " +
+                "intervalo integer not null, " +
+                "quantidade integer not null);");
 
     }
 
