@@ -1,11 +1,10 @@
 package com.example.marcos.myapplication;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,11 +77,13 @@ public class NewMedicamentoActivity extends Activity {
     public void voltarMain(View view){
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
+
     }
 
     public void voltarLista(View view){
         Intent intent=new Intent(this,ListMedicamentosActivity.class);
         startActivity(intent);
+
     }
 
     public void salvarMedicamento(View view){
@@ -121,6 +122,7 @@ public class NewMedicamentoActivity extends Activity {
         //voltando a main
         Intent intent2=new Intent(this,MainActivity.class);
         startActivity(intent2);
+
     }
 
 
@@ -139,6 +141,8 @@ public class NewMedicamentoActivity extends Activity {
 
         Intent intent=new Intent(this,ListMedicamentosActivity.class);
         startActivity(intent);
+
+
     }
     }
 

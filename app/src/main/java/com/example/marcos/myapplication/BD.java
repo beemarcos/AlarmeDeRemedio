@@ -48,6 +48,27 @@ public class BD  {
         db.delete("medicamento", "_id = "+medicamento.getId(), null);
     }
 
+    public Medicamento pesquisarMedicamento(String nome){
+
+        String[] colunas = new String[]{"_id", "nome", "tipo_dosagem", "tempo_tratamento", "dose","intervalo", "quantidade"};
+        Cursor cursor = db.query("medicamento", colunas, null, null, null, null, "nome");
+        Medicamento m = new Medicamento();
+
+        if(cursor.getCount() > 0){
+            do {
+                m.setId(cursor.getLong(0));
+                m.setNome(cursor.getString(1));
+                m.setTipo_dosagem(cursor.getString(2));
+                m.setTempo_tratamento(cursor.getString(3));
+                m.setDose(cursor.getInt(4));
+                m.setIntervalo(cursor.getInt(5));
+                m.setQuantidade(cursor.getInt(6));
+            }while(cursor.moveToNext());
+        }
+
+        return m;
+    }
+
     public List<Medicamento> buscarMedicamento(){
         List<Medicamento> list = new ArrayList<Medicamento>();
         String[] colunas = new String[]{"_id", "nome", "tipo_dosagem", "tempo_tratamento", "dose","intervalo", "quantidade"};

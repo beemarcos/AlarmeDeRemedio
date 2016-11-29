@@ -1,7 +1,5 @@
 package com.example.marcos.myapplication;
 
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * Created by Pantufa on 22/10/2016.
@@ -72,11 +72,11 @@ public class MedicamentoAdapter extends BaseAdapter {
         deletarBt.setOnClickListener(new Button.OnClickListener(){
 
             public void onClick(View arg0) {
-                Intent intent = new Intent(context, ListMedicamentosActivity.class);
+                //Intent intent = new Intent(context, ListMedicamentosActivity.class);
                 BD bd = new BD(context);
                 bd.deletarMedicamento(list.get(auxPosition));
                 layout.setVisibility(View.GONE);
-                context.startActivity(intent);
+               // context.startActivity(intent);
             }
         });
 

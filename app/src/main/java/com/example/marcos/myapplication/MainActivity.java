@@ -1,26 +1,12 @@
 package com.example.marcos.myapplication;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-
-import java.util.Calendar;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +14,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
     }
 
     @Override
-    protected void onDestroy(){
-        super.onDestroy();
+    protected void onResume() {
+        if(getIntent().getBooleanExtra("SAIR", false)){
+            finish();
+        }
+        super.onResume();
     }
 
 
@@ -45,14 +32,28 @@ public class MainActivity extends AppCompatActivity {
 
         if (bt.getText().toString().equalsIgnoreCase("Novo Medicamento")) {
             intent = new Intent(this, NewMedicamentoActivity.class);
+            startActivity(intent);
+
+
         } else if(bt.getText().toString().equalsIgnoreCase("Lista de Medicamentos")){
             intent = new Intent(this, ListMedicamentosActivity.class);
+            startActivity(intent);
+
+
         } else if(bt.getText().toString().equalsIgnoreCase("Localizar")){
             intent = new Intent(this, PlacePickerActivity.class);
+            startActivity(intent);
+
+
+        }else if(bt.getText().toString().equalsIgnoreCase("Sair")){
+
+            Intent intent1 = new Intent(Intent.ACTION_MAIN);
+            intent1.addCategory(Intent.CATEGORY_HOME);
+            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent1);
         }
 
-        startActivity(intent);
+        //startActivity(intent);
     }
-
 
 }

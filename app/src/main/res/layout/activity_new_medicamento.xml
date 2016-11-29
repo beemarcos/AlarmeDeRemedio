@@ -13,25 +13,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Novo Medicamento" />
+        android:text="Novo Medicamento"
+        android:textSize="@dimen/activity_horizontal_margin"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome" />
 
     <EditText
         android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="*Nome" >
+        android:hint="" >
 
         <requestFocus />
     </EditText>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo Dosagem" />
     <EditText
         android:id="@+id/tipo_dosagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="*Tipo de Dosagem" />
+        android:hint="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempo de Tratamento" />
 
     <EditText
         android:id="@+id/tempo_tratamento"
@@ -39,31 +52,44 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="*Tempo de Tratamento" />
+        android:hint="" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dose" />
     <EditText
     android:id="@+id/dose"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ems="10"
     android:inputType="number"
-    android:hint="*Dose" />
+    android:hint="" />
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intervalo de Tempo" />
     <EditText
         android:id="@+id/intervalo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:hint="*Intervalo" />
+        android:hint="" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quantidade" />
     <EditText
         android:id="@+id/quantidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:hint="*Quantidade" />
+        android:hint="" />
 
     <Button
         android:id="@+id/button1"
