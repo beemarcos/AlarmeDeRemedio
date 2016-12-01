@@ -80,6 +80,8 @@ public class MedicamentoAdapter extends BaseAdapter {
             }
         });
 
+       // Button voltarMainBt = (Button) layout.findViewById(R.id.voltar);
+
         return layout;
     }
 }

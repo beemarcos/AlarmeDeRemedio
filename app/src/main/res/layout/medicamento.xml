@@ -4,54 +4,70 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/nome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
 
-    <TextView
-        android:id="@+id/tipo_dosagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tempo_tratamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
 
-    <TextView
-        android:id="@+id/dose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/intervalo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        <TextView
+            android:id="@+id/tipo_dosagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
 
-    <TextView
-        android:id="@+id/quantidade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        <TextView
+            android:id="@+id/tempo_tratamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
 
-    <Button
-        android:id="@+id/editar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Editar"
-        android:onClick="editarMedicamento" />
+        <TextView
+            android:id="@+id/dose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
 
-    <Button
-        android:id="@+id/deletar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deletar"
-        android:onClick="deletar" />
+        <TextView
+            android:id="@+id/intervalo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <Button
+            android:id="@+id/editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:onClick="editarMedicamento"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/deletar"
+            android:layout_toStartOf="@+id/deletar" />
+
+        <Button
+            android:id="@+id/deletar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deletar"
+            android:onClick="deletar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>

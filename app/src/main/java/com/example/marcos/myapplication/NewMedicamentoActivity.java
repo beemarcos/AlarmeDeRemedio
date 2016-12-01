@@ -29,6 +29,8 @@ public class NewMedicamentoActivity extends Activity {
     private Button voltarMainBt;
     private Button voltarListBt;
 
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_medicamento);
@@ -101,9 +103,11 @@ public class NewMedicamentoActivity extends Activity {
 
         // alteracoes do marcos
         Calendar calendar = Calendar.getInstance();
+
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY,14);
-        calendar.set(Calendar.MINUTE,27);
+
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE,00);
         //calendar.set(Calendar.SECOND,00);
 
         Intent intent = new Intent(getApplicationContext(),ReceberAlarme.class);

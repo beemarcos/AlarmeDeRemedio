@@ -32,6 +32,11 @@ public class Repeating_activity extends Activity {
     public void onClickTomei(View view) {
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
+        Intent intent1 = new Intent(Intent.ACTION_MAIN);
+        intent1.addCategory(Intent.CATEGORY_HOME);
+        intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent1);
+
 
     }
 
